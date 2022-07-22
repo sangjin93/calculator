@@ -11,3 +11,12 @@ html {
     min-height: 100%;
 };
 
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 75vh;
+    min-height: 500px;
+    padding: 10px;
+    margin-top: 50px;
+}
