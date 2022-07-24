@@ -12,6 +12,12 @@ const pointButton = document.getElementById('pointBtn')
 const lastOperationScreen = document.getElementById('lastOperationScreen')
 const currentOperationScreen = document.getElementById('currentOperationScreen')
 
+window.addEventListener('keydown', handleKeyboardInput);
+equalsButton.addEventListener('click', evaluate);
+clearButton.addEventListener('click', clear);
+deleteButton.addEventListener('click', deleteNumber);
+pointButton.addEventListener('click', addPoint);
+
 function addNumber(number) {
     if (currentOperationScreen.textContent === '0' || shouldResetScreen) {
         resetScreen();
@@ -99,7 +105,7 @@ function convertOperator(keyboardOperator) {
     if (keyboardOperator === '*') return 'x';
     if (keyboardOperator === '-') return '-';
     if (keyboardOperator === '+') return '+';
-}
+};
 
 function add(a, b) {
     return a + b;
