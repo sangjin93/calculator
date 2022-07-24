@@ -44,6 +44,23 @@ function addPoint() {
     }
 };
 
+function deleteNumber() {
+    currentOperationScreen.textContent = currentOperationScreen.textContent
+        .toString()
+        .slice(0, -1)
+};
+  
+function setOperation(operator) {
+    if (currentOperation !== null) {
+        evaluate();
+    };
+    
+    firstOperand = currentOperationScreen.textContent;
+    currentOperation = operator;
+    lastOperationScreen.textContent = `${firstOperand} ${currentOperation}`;
+    shouldResetScreen = true;
+};
+
   
 function add(a, b) {
     return a + b;
