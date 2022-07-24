@@ -24,6 +24,27 @@ function resetScreen() {
     shouldResetScreen = false;
 };
 
+function clear() {
+    currentOperationScreen.textContent = '0';
+    lastOperationScreen.textContent = '';
+    firstOperand = '';
+    secondOperand = '';
+    currentOperation = null;
+};
+  
+function addPoint() {
+    if (shouldResetScreen) {
+        resetScreen();
+    }
+    if (currentOperationScreen.textContent === '') {
+        currentOperationScreen.textContent = '0';
+    }
+    if (currentOperationScreen.textContent.includes('.')) {
+        return currentOperationScreen.textContent += '.';
+    }
+};
+
+  
 function add(a, b) {
     return a + b;
 };
