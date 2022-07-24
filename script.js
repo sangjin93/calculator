@@ -18,6 +18,15 @@ clearButton.addEventListener('click', clear);
 deleteButton.addEventListener('click', deleteNumber);
 pointButton.addEventListener('click', addPoint);
 
+numberButtons.forEach((button) =>
+    button.addEventListener('click', () => addNumber(button.textContent));
+);
+
+operatorButtons.forEach((button) =>
+    button.addEventListener('click', () => setOperation(button.textContent));
+);
+
+
 function addNumber(number) {
     if (currentOperationScreen.textContent === '0' || shouldResetScreen) {
         resetScreen();
