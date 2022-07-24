@@ -40,6 +40,16 @@ html {
     word-break: break-all;
 };
 
+.screen-last {
+    min-height: 32px;
+    font-size: 20px;
+};
+  
+.screen-current {
+    min-height: 64px;
+    font-size: 40px;
+};
+  
 .buttons-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
