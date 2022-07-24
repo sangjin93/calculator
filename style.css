@@ -56,6 +56,10 @@ html {
     grid-gap: 10px;
 };
 
+.span-2 {
+    grid-column: span 2;
+};
+
 .btn {
     padding: 20px;
     border: 2px solid #333;
