@@ -44,4 +44,12 @@ html {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 10px;
-}; 
+};
+
+.btn {
+    padding: 20px;
+    border: 2px solid #333;
+    border-radius: 5px;
+    background-color: #eee;
+    font-size: 20px;
+};
