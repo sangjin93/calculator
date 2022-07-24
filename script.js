@@ -10,7 +10,19 @@ const clearButton = document.getElementById('clearBtn')
 const deleteButton = document.getElementById('deleteBtn')
 const pointButton = document.getElementById('pointBtn')
 const lastOperationScreen = document.getElementById('lastOperationScreen')
-const currentOperationScreen = document.getElementById('currentOperationScreen'
+const currentOperationScreen = document.getElementById('currentOperationScreen')
+
+function addNumber(number) {
+    if (currentOperationScreen.textContent === '0' || shouldResetScreen) {
+        resetScreen();
+        currentOperationScreen.textContent += number;
+    }
+};
+  
+function resetScreen() {
+    currentOperationScreen.textContent = '';
+    shouldResetScreen = false;
+};
 
 function add(a, b) {
     return a + b;
