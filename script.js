@@ -54,13 +54,35 @@ function setOperation(operator) {
     if (currentOperation !== null) {
         evaluate();
     };
-    
+
     firstOperand = currentOperationScreen.textContent;
     currentOperation = operator;
     lastOperationScreen.textContent = `${firstOperand} ${currentOperation}`;
     shouldResetScreen = true;
 };
 
+function evaluate() {
+    if (currentOperation === null || shouldResetScreen) {
+        return;
+    };
+
+    if (currentOperation === '÷' && currentOperationScreen.textContent === '0') {
+        alert("You can't divide by 0!");
+        return;
+    };
+
+    secondOperand = currentOperationScreen.textContent;
+    currentOperationScreen.textContent = roundResult(
+      operate(currentOperation, firstOperand, secondOperand)
+    );
+    
+    lastOperationScreen.textContent = `${firstOperand} ${currentOperation} ${secondOperand} =`;
+    currentOperation = null;
+};
+  
+function roundResult(number) {
+    return Math.round(number * 1000) / 1000;
+};
   
 function add(a, b) {
     return a + b;
