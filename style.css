@@ -4,12 +4,29 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-};
+}
 
 html {
     position: relative;
     min-height: 100%;
-};
+}
+
+body {
+    background-color: #f6f6f6;
+    color: #222;
+    font-family: "Arial", sans-serif;
+    line-height: 1.6;
+    margin-bottom: 100px;
+}
+
+button {
+    border: none;
+    color: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    cursor: pointer;
+    outline: none;
+}
 
 .main {
     display: flex;
@@ -19,7 +36,7 @@ html {
     min-height: 500px;
     padding: 10px;
     margin-top: 50px;
-};
+}
 
 .calculator {
     width: 400px;
@@ -27,7 +44,7 @@ html {
     border-radius: 15px;
     padding: 20px;
     background-color: lightgray;
-};
+}
 
 .screen {
     padding: 10px 20px;
@@ -38,27 +55,27 @@ html {
     text-align: right;
     word-wrap: break-word;
     word-break: break-all;
-};
+}
 
 .screen-last {
     min-height: 32px;
     font-size: 20px;
-};
+}
   
 .screen-current {
     min-height: 64px;
     font-size: 40px;
-};
+}
   
 .buttons-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 10px;
-};
+}
 
 .span-2 {
     grid-column: span 2;
-};
+}
 
 .btn {
     padding: 20px;
@@ -66,4 +83,12 @@ html {
     border-radius: 5px;
     background-color: #eee;
     font-size: 20px;
-};
+}
+
+.btn:hover {
+    background-color: #ddd;
+}
+  
+.btn:active {
+    background-color: #ccc;
+}

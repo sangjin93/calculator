@@ -19,11 +19,11 @@ deleteButton.addEventListener('click', deleteNumber);
 pointButton.addEventListener('click', addPoint);
 
 numberButtons.forEach((button) =>
-    button.addEventListener('click', () => addNumber(button.textContent));
+    button.addEventListener('click', () => addNumber(button.textContent))
 );
 
 operatorButtons.forEach((button) =>
-    button.addEventListener('click', () => setOperation(button.textContent));
+    button.addEventListener('click', () => setOperation(button.textContent))
 );
 
 
@@ -145,7 +145,7 @@ function operate(operator, a, b) {
         return multiply(a, b);
       case '÷':
         if (b === 0) {
-            return null
+            return null;
         } else return divide(a, b);
       default:
         return null;
